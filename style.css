@@ -1,18 +1,33 @@
-/* 🌈 Fondo degradado moderno */
+/* ===============================
+    Fondo degradado animado
+   =============================== */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    color: #333;
+
+    /* degradado animado */
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
     transition: background 0.5s ease;
 }
 
-/* 📦 Contenedor central */
+/* Animación fondo */
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* ===============================
+    Encabezados
+   =============================== */
 h1 {
     margin-top: 40px;
     font-size: 2.5em;
@@ -20,7 +35,14 @@ h1 {
     text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 
-/* 🖼 Inputs y botones */
+h3 {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* ===============================
+    Inputs
+   =============================== */
 input {
     padding: 10px 15px;
     margin: 5px 0;
@@ -28,16 +50,25 @@ input {
     border: 1px solid #ccc;
     font-size: 1em;
     transition: all 0.3s ease;
+    color: #333;        /* texto dentro del input */
+    caret-color: black;  /* cursor negro */
+    opacity: 0;          /* para animación de entrada */
+    animation: slideFromTop 0.8s ease-out forwards;
 }
 
+/* Input enfocado */
 input:focus {
     border-color: #fff;
     outline: none;
     box-shadow: 0 0 10px rgba(255,255,255,0.6);
     background-color: rgba(255,255,255,0.2);
     color: #fff;
+    caret-color: black;
 }
 
+/* ===============================
+    Botones
+   =============================== */
 button {
     padding: 10px 20px;
     margin: 10px 0;
@@ -49,6 +80,8 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;  /* para animación de entrada */
+    animation: slideFromTop 0.8s ease-out forwards;
 }
 
 button:hover {
@@ -58,7 +91,23 @@ button:hover {
     color: #fff;
 }
 
-/* 📖 Texto de salida */
+/* ===============================
+    Animación entrada desde arriba
+   =============================== */
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===============================
+    Output Display/Legal
+   =============================== */
 #output {
     margin-top: 20px;
     padding: 15px;
@@ -71,12 +120,6 @@ button:hover {
     transition: background 0.3s ease;
 }
 
-/* 🌐 Secciones */
-h3 {
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
-/* ✨ Estilo para Display y Legal */
 .identity-field {
     padding: 10px 15px;
     margin: 5px 0;
@@ -86,9 +129,36 @@ h3 {
     font-size: 1.1em;
     text-align: left;
     transition: background 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* fade-in inicial */
+    animation: fadeIn 0.6s ease forwards;
 }
 
 .identity-field:hover {
     background: rgba(255,255,255,0.35);
     transform: translateX(5px);
+}
+
+/* Animación fade-in para Display/Legal */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/*  Animación fade-in para Display y Legal */
+.identity-field {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 1.1em;
+    text-align: left;
+    opacity: 0; /* empieza invisible */
+    transform: translateY(10px); /* un pequeño desplazamiento hacia abajo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* animación suave */
+}
+
+.identity-field.show {
+    opacity: 1; /* se vuelve visible */
+    transform: translateY(0); /* vuelve a la posición normal */
 }
