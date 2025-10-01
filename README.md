@@ -31,6 +31,15 @@ El objetivo es demostrar cómo se podría implementar un sistema de identidad se
 
 ---
 
+## Demo en vivo
+
+Pueden probar la DApp directamente en:  
+https://magisuri05.github.io/identify-dapp/
+
+(Copiar y Pegar enlace directamente en tu navegador)
+
+---
+
 ## Características del prototipo
 
 - **Diseño moderno y minimalista:** fondo degradado, tipografía elegante, botones animados.
@@ -65,4 +74,5 @@ Si querés hacer consultas sobre este prototipo o sobre el proyecto:
 
 Este prototipo fue diseñado para **demostraciones y concursos**, mostrando la experiencia de usuario y la lógica de un sistema de identidad descentralizado.
 La implementación en blockchain real sería el siguiente paso, utilizando cuentas y transacciones reales en Polkadot.
+
 
