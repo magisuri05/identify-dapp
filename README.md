@@ -55,8 +55,8 @@ El objetivo es demostrar cómo se podría implementar un sistema de identidad se
 
 Si querés hacer consultas sobre este prototipo o sobre el proyecto:
 
-- **Nombre:** Uriel
-- **Correo / contacto:** [magisuri3@gmail.com]
+- **Nombre:** Uriel Magisrali
+- **Correo / contacto:** magisuri3@gmail.com
 - **GitHub Personal:** https://github.com/magisuri05
 
 ---
@@ -65,3 +65,4 @@ Si querés hacer consultas sobre este prototipo o sobre el proyecto:
 
 Este prototipo fue diseñado para **demostraciones y concursos**, mostrando la experiencia de usuario y la lógica de un sistema de identidad descentralizado.
 La implementación en blockchain real sería el siguiente paso, utilizando cuentas y transacciones reales en Polkadot.
+
