@@ -76,3 +76,4 @@ Este prototipo fue diseñado para **demostraciones y concursos**, mostrando la e
 La implementación en blockchain real sería el siguiente paso, utilizando cuentas y transacciones reales en Polkadot.
 
 
+
