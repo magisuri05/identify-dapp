@@ -1,28 +1,32 @@
-// Objeto local para simular la blockchain
+// Objeto local para simular blockchain
 const identities = {};
 
 // Write
 window.registerIdentity = function () {
-  const name = document.getElementById("name").value;
-  const country = document.getElementById("country").value;
+  const name = document.getElementById("name").value.trim();
+  const country = document.getElementById("country").value.trim();
 
-  // Simula almacenar on-chain
+  if (!name || !country) {
+    alert("Por favor completá todos los campos");
+    return;
+  }
+
+  // Dirección simulada (fija)
   const fakeAddress = "5GrwvaEF5zXb26Fz9rcQpDWS3g1nrC1qT7Sp6kVd5B7XQGvU";
   identities[fakeAddress] = { display: name, legal: country };
 
   alert("Identidad registrada! (simulado)");
 };
 
-// Read
+// Read con animación fade-in progresiva
 window.readIdentity = function () {
-  const address = document.getElementById("address").value;
+  const address = document.getElementById("address").value.trim();
   const identity = identities[address];
 
   const output = document.getElementById("output");
-  output.innerHTML = ""; // Limpiar contenido previo
+  output.innerHTML = ""; // limpiar contenido previo
 
   if (identity) {
-    // Creamos elementos separados con estilo
     const displayEl = document.createElement("div");
     displayEl.className = "identity-field";
     displayEl.innerHTML = `<strong>Display:</strong> ${identity.display}`;
@@ -33,9 +37,11 @@ window.readIdentity = function () {
 
     output.appendChild(displayEl);
     output.appendChild(legalEl);
+
+    // Animación progresiva
+    setTimeout(() => displayEl.classList.add("show"), 50);
+    setTimeout(() => legalEl.classList.add("show"), 250);
   } else {
     output.innerText = "No se encontró identidad";
   }
 };
-
-
