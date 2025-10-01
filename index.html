@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Identity DApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Identity DApp en Polkadot</h1>
+
+  <h3>Registrar Identidad</h3>
+  <input id="name" placeholder="Nombre">
+  <input id="country" placeholder="País">
+  <button onclick="registerIdentity()">Write</button>
+
+  <h3>Leer Identidad</h3>
+  <input id="address" placeholder="Dirección del usuario">
+  <button onclick="readIdentity()">Read</button>
+  <p id="output"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>

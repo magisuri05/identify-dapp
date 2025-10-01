@@ -1,0 +1,17 @@
+{
+  "name": "identity-dapp",
+  "version": "1.0.0",
+  "description": "Prototipo de DApp de identidad en Polkadot",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server",
+    "deploy": "node deploy.js"
+  },
+  "dependencies": {
+    "@polkadot/api": "^10.11.1",
+    "@polkadot/util-crypto": "^10.11.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

@@ -1,2 +1,13 @@
-# identify-dapp
-Prototipo de DApp de identidad en Polkadot que permite registrar y leer un nombre y país asociado a una dirección. Diseño moderno y minimalista, con animaciones y fondo degradado. Ideal para demostrar experiencia de usuario y lógica de registro on-chain de manera interactiva.
+# Identity DApp - Prototipo
+
+## Red
+Polkadot JS local / Rococo testnet
+
+## Dirección de contacto
+tuemail@ejemplo.com
+
+## Cómo probar
+1. Clonar el repositorio
+2. Instalar dependencias: `npm install`
+3. Levantar app: `npm start`
+4. Abrir `http://localhost:3000`
